@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Welcome to your Jupyter Book &#8212; Tropical Pacific Oxygen Dynamics</title>
+    <title>Tropical Pacific Oxygen Dynamics at the Mesoscale &#8212; Tropical Pacific Oxygen Dynamics</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Markdown Files" href="markdown.html" />
+    <link rel="next" title="This notebook compares the CESM 0.1º and 1º O\(_2\) distributions and zonal velcoity fields to observations" href="mean_O2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -108,40 +108,23 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1 current active">
                 <a class="reference internal" href="#">
-                    Welcome to your Jupyter Book
+                    Tropical Pacific Oxygen Dynamics at the Mesoscale
                 </a>
             </li>
         </ul>
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="markdown.html">
-   Markdown Files
+  <a class="reference internal" href="mean_O2.html">
+   This notebook compares the CESM 0.1º and 1º O
+   <span class="math notranslate nohighlight">
+    \(_2\)
+   </span>
+   distributions and zonal velcoity fields to observations
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="notebooks.html">
-   Content with notebooks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="markdown-notebooks.html">
-   Notebooks with MyST Markdown
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tracer_mean.html">
-   <div class="system-message">
-    <p class="system-message-title">
-     System Message: ERROR/3 (
-     <span class="docutils literal">
-      /glade/u/home/yeddebba/TPO2/tracer_mean.ipynb
-     </span>
-     , line 10002)
-    </p>
-    <p>
-     Substitution error:UndefinedError: ‘variable_id’ is undefined
-    </p>
-   </div>
+  <a class="reference internal" href="budget.html">
+   Oxygen Budget Analysis
   </a>
  </li>
 </ul>
@@ -311,7 +294,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Welcome to your Jupyter Book</h1>
+                <h1>Tropical Pacific Oxygen Dynamics at the Mesoscale</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -323,23 +306,18 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-your-jupyter-book">
-<h1>Welcome to your Jupyter Book<a class="headerlink" href="#welcome-to-your-jupyter-book" title="Permalink to this headline">#</a></h1>
-<p>This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a> for more information.</p>
-<p>Check out the content pages bundled with this sample book to see more.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="tropical-pacific-oxygen-dynamics-at-the-mesoscale">
+<h1>Tropical Pacific Oxygen Dynamics at the Mesoscale<a class="headerlink" href="#tropical-pacific-oxygen-dynamics-at-the-mesoscale" title="Permalink to this headline">#</a></h1>
+<p>This book presents an analysis of the oxygen budget in the equatorial Pacific in an eddy resolving model of ocean circualtion and biogeochemistry.</p>
+<p>Here we examine the role of physical and biogeochemical processes governing the structure and seasonal-to-interannual variability of the upper oxygen content and structure, and elaborate on pathways governing oxygen ventilation in this region.</p>
+<p><img alt="oxygen drivers" src="_images/mechanisms.png" /></p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tracer_mean.html"><div class="system-message">
-<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/glade/u/home/yeddebba/TPO2/tracer_mean.ipynb</span>, line 10002)</p>
-<p>Substitution error:UndefinedError: ‘variable_id’ is undefined</p>
-</div>
-</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mean_O2.html">This notebook compares the CESM 0.1º and 1º O<span class="math notranslate nohighlight">\(_2\)</span> distributions and zonal velcoity fields to observations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mean_O2.html#import-packages">Import packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mean_O2.html#spin-up-dask-cluster-client">Spin up Dask Cluster/Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mean_O2.html#read-0-1o-cesm-outputs">Read 0.1º CESM Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="budget.html">Oxygen Budget Analysis</a></li>
 </ul>
 </div>
 </section>
@@ -371,10 +349,10 @@ It does not go in-depth into any particular topic - check out <a class="referenc
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="markdown.html" title="next page">
+    <a class='right-next' id="next-link" href="mean_O2.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Markdown Files</p>
+        <p class="prev-next-title">This notebook compares the CESM 0.1º and 1º O<span class="math notranslate nohighlight">\(_2\)</span> distributions and zonal velcoity fields to observations</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
