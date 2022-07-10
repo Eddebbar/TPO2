@@ -3,7 +3,7 @@
 
 title: Tropical Pacific Oxygen Dynamics 
 author: Yassir Eddebbar
-logo: OMZ_logo.png
+logo: O2_logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
