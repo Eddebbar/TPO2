@@ -1,11 +1,11 @@
-# Welcome to your Jupyter Book
+# Tropical Pacific Oxygen Dynamics at the Mesoscale 
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+This book presents an analysis of the oxygen budget in the equatorial Pacific in an eddy resolving model of ocean circualtion and biogeochemistry.
 
-Check out the content pages bundled with this sample book to see more.
+Here we examine the role of physical and biogeochemical processes governing the structure and seasonal-to-interannual variability of the upper oxygen content and structure, and elaborate on pathways governing oxygen ventilation in this region. 
+
+![oxygen drivers](mechanisms.png)
+
 
 ```{tableofcontents}
 ```
