@@ -1,10 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# #### This notebook compares the CESM 0.1º and 1º O$_2$ distributions and zonal velcoity fields to observations
-
-# ---
-# ### Import packages
+# # Mean Oxygen Map
 
 # In[1]:
 
@@ -37,10 +34,6 @@ from pop_tools import get_grid
 import proplot
 from utils import *
 
-
-# 
-# ---
-# ## Spin up Dask Cluster/Client
 
 # In[57]:
 
