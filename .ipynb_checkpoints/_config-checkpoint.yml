@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Mesoscale Oxygen Dynamics in the Tropical Pacific
+title: Mesoscale O$_2$ Dynamics in the Tropical Pacific
 author: Yassir Eddebbar
 logo: O2_logo.png
 
@@ -28,5 +28,10 @@ repository:
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
-  use_issues_button: true
+  use_issues_button: false
   use_repository_button: true
+  
+launch_buttons:
+  jupyterhub_url: 'https://jupyterhub.hpc.ucar.edu/dev'
+  notebook_interface: 'jupyterlab'
+
