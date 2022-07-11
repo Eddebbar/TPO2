@@ -1,0 +1,770 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Oxygen Budget Analysis &#8212; Mesoscale Oxygen Dynamics in the Tropical Pacific</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Mean Oxygen Map" href="mean_O2.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/O2_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mesoscale Oxygen Dynamics in the Tropical Pacific</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Tropical Pacific Oxygen Dynamics at the Mesoscale
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="mean_O2.html">
+   Mean Oxygen Map
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Oxygen Budget Analysis
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/Eddebbar/TPO2/master?urlpath=tree/docs/notebooks/budget.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/Eddebbar/TPO2"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/Eddebbar/TPO2/issues/new?title=Issue%20on%20page%20%2Fnotebooks/budget.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/notebooks/budget.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plot">
+   Plot
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#integrate-over-depth-meridional-zonal-bands">
+   Integrate over depth, meridional, zonal bands
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Oxygen Budget Analysis</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plot">
+   Plot
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#integrate-over-depth-meridional-zonal-bands">
+   Integrate over depth, meridional, zonal bands
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="oxygen-budget-analysis">
+<h1>Oxygen Budget Analysis<a class="headerlink" href="#oxygen-budget-analysis" title="Permalink to this headline">#</a></h1>
+<p>This notebook analyzes the O<span class="math notranslate nohighlight">\(_2\)</span> budget from POP output. Dissolved oxygen in the ocean’s interior is simulated following:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial{O_2}}{\partial{t}}= \underbrace{- \frac{\partial{U.O_2}}{\partial{x}} -\frac{\partial{V.O_2}}{\partial{y}}}_\text{Lateral Advection}
+- \overbrace{\frac{\partial{W.O_2}}{\partial{z}}}^\text{Vertical Advection}
++ \underbrace{A_h.\nabla^2{O_2}}_\text{Lateral Mixing}
++\overbrace{\frac{\partial{}}{\partial{z}}k.\frac{\partial{O_2}}{\partial{z}}}^\text{Vertical Mixing}
++ \underbrace{ J(O_2)  }_\text{Sources - Sinks}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> autoreload
+<span class="o">%</span><span class="k">autoreload</span> 2
+<span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span> <span class="c1"># Silence warnings</span>
+
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
+<span class="kn">import</span> <span class="nn">xgcm</span> 
+<span class="kn">import</span> <span class="nn">pop_tools</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.colors</span> <span class="k">as</span> <span class="nn">colors</span>
+<span class="kn">import</span> <span class="nn">cmocean</span>
+<span class="kn">import</span> <span class="nn">cartopy</span>
+<span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
+<span class="kn">import</span> <span class="nn">proplot</span> 
+<span class="kn">import</span> <span class="nn">matplotlib.patches</span> <span class="k">as</span> <span class="nn">patches</span>
+
+<span class="kn">from</span> <span class="nn">utils</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="o">=</span><span class="n">CLSTR</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">C</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+    <div style="width: 24px; height: 24px; background-color: #e1e1e1; border: 3px solid #9D9D9D; border-radius: 5px; position: absolute;"> </div>
+    <div style="margin-left: 48px;">
+        <h3 style="margin-bottom: 0px;">Client</h3>
+        <p style="color: #9D9D9D; margin-bottom: 0px;">Client-fa4186bc-8dd8-11ec-a522-3cecef1acb68</p>
+        <table style="width: 100%; text-align: left;">
+
+        <tr>
+
+            <td style="text-align: left;"><strong>Connection method:</strong> Cluster object</td>
+            <td style="text-align: left;"><strong>Cluster type:</strong> dask_jobqueue.PBSCluster</td>
+
+        </tr>
+
+
+            <tr>
+                <td style="text-align: left;">
+                    <strong>Dashboard: </strong> <a href="https://jupyterhub.hpc.ucar.edu/stable/user/yeddebba/proxy/37364/status" target="_blank">https://jupyterhub.hpc.ucar.edu/stable/user/yeddebba/proxy/37364/status</a>
+                </td>
+                <td style="text-align: left;"></td>
+            </tr>
+
+
+        </table>
+
+
+            <details>
+            <summary style="margin-bottom: 20px;"><h3 style="display: inline;">Cluster Info</h3></summary>
+            <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+    <div style="width: 24px; height: 24px; background-color: #e1e1e1; border: 3px solid #9D9D9D; border-radius: 5px; position: absolute;">
+    </div>
+    <div style="margin-left: 48px;">
+        <h3 style="margin-bottom: 0px; margin-top: 0px;">PBSCluster</h3>
+        <p style="color: #9D9D9D; margin-bottom: 0px;">336ddab8</p>
+        <table style="width: 100%; text-align: left;">
+            <tr>
+                <td style="text-align: left;">
+                    <strong>Dashboard:</strong> <a href="https://jupyterhub.hpc.ucar.edu/stable/user/yeddebba/proxy/37364/status" target="_blank">https://jupyterhub.hpc.ucar.edu/stable/user/yeddebba/proxy/37364/status</a>
+                </td>
+                <td style="text-align: left;">
+                    <strong>Workers:</strong> 0
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">
+                    <strong>Total threads:</strong> 0
+                </td>
+                <td style="text-align: left;">
+                    <strong>Total memory:</strong> 0 B
+                </td>
+            </tr>
+
+        </table>
+
+        <details>
+            <summary style="margin-bottom: 20px;">
+                <h3 style="display: inline;">Scheduler Info</h3>
+            </summary>
+
+            <div style="">
+    <div>
+        <div style="width: 24px; height: 24px; background-color: #FFF7E5; border: 3px solid #FF6132; border-radius: 5px; position: absolute;"> </div>
+        <div style="margin-left: 48px;">
+            <h3 style="margin-bottom: 0px;">Scheduler</h3>
+            <p style="color: #9D9D9D; margin-bottom: 0px;">Scheduler-81fdded2-36c5-48d3-ba79-757c37517fb6</p>
+            <table style="width: 100%; text-align: left;">
+                <tr>
+                    <td style="text-align: left;">
+                        <strong>Comm:</strong> tcp://10.12.206.46:45598
+                    </td>
+                    <td style="text-align: left;">
+                        <strong>Workers:</strong> 0
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">
+                        <strong>Dashboard:</strong> <a href="https://jupyterhub.hpc.ucar.edu/stable/user/yeddebba/proxy/37364/status" target="_blank">https://jupyterhub.hpc.ucar.edu/stable/user/yeddebba/proxy/37364/status</a>
+                    </td>
+                    <td style="text-align: left;">
+                        <strong>Total threads:</strong> 0
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">
+                        <strong>Started:</strong> Just now
+                    </td>
+                    <td style="text-align: left;">
+                        <strong>Total memory:</strong> 0 B
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <details style="margin-left: 48px;">
+        <summary style="margin-bottom: 20px;">
+            <h3 style="display: inline;">Workers</h3>
+        </summary>
+
+
+
+    </details>
+</div>
+
+        </details>
+    </div>
+</div>
+            </details>
+
+
+    </div>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsh</span><span class="o">=</span><span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">({</span><span class="s1">&#39;/glade/scratch/yeddebba/Mesoscale/HR/TPAC/final_budget/O2_Budget_Mean.nc&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;/glade/scratch/yeddebba/Mesoscale/HR/TPAC/final_budget/O2_Budget_Eddy_Mean.nc&#39;</span><span class="p">,})</span>
+
+<span class="n">du</span><span class="o">=</span><span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="s1">&#39;/glade/scratch/yeddebba/Mesoscale/HR/CLM/[UVW]VEL.CLM.nc&#39;</span><span class="p">)</span>
+<span class="n">dshm</span><span class="o">=</span><span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="s1">&#39;/glade/scratch/yeddebba/Mesoscale/HR/TPAC/final_budget/[UVW]_dO2m_Mean.nc&#39;</span><span class="p">)</span>
+<span class="n">dshd</span><span class="o">=</span><span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="s1">&#39;/glade/scratch/yeddebba/Mesoscale/HR/TPAC/final_budget/[UVW]_dO2_Mean.nc&#39;</span><span class="p">)</span>
+<span class="n">dshe</span><span class="o">=</span><span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="s1">&#39;/glade/scratch/yeddebba/Mesoscale/HR/TPAC/final_budget/DIVde_Mean.nc&#39;</span><span class="p">)</span>
+
+<span class="c1"># dshm=xr.open_mfdataset(&#39;/glade/scratch/yeddebba/Mesoscale/HR/TPAC/final_budget/DIVd_Mean.nc&#39;)</span>
+<span class="c1"># dshd=xr.open_mfdataset(&#39;/glade/scratch/yeddebba/Mesoscale/HR/TPAC/final_budget/DIVdm_Mean.nc&#39;)</span>
+<span class="c1"># dshe=xr.open_mfdataset(&#39;/glade/scratch/yeddebba/Mesoscale/HR/TPAC/final_budget/DIVde_Mean.nc&#39;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="plot">
+<h2>Plot<a class="headerlink" href="#plot" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot_depth_section</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">z</span><span class="p">,</span> <span class="n">var</span><span class="p">,</span><span class="n">cntf</span><span class="p">,</span><span class="n">lev</span><span class="p">,</span><span class="n">clr</span><span class="p">,</span><span class="n">units</span><span class="p">,</span><span class="n">title</span><span class="p">,</span><span class="n">coords</span><span class="p">,</span><span class="n">fs</span><span class="p">,</span><span class="n">fsx</span><span class="p">,</span><span class="n">lw</span><span class="p">,</span><span class="n">alp</span><span class="p">,</span><span class="n">cb_on</span><span class="p">,</span><span class="n">profile</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">cntf</span><span class="o">==</span><span class="kc">True</span><span class="p">:</span> 
+        <span class="n">cs</span><span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">z</span><span class="p">,</span><span class="n">var</span><span class="p">,</span><span class="n">levels</span><span class="o">=</span><span class="n">lev</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="n">clr</span><span class="p">,</span><span class="n">extend</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">cb_on</span><span class="o">==</span><span class="kc">True</span><span class="p">:</span>
+            <span class="n">cb</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cs</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;vertical&#39;</span><span class="p">,</span> <span class="n">extend</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span><span class="n">pad</span><span class="o">=</span><span class="mf">0.02</span><span class="p">)</span><span class="c1">#, aspect=20)  </span>
+<span class="c1">#             cb.ax.set_title(units,fontsize=fs-1,pad=0.2)</span>
+            <span class="n">cb</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="n">units</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="n">fs</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="n">position</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.08</span><span class="p">))</span>
+            <span class="n">cb</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">labelsize</span><span class="o">=</span><span class="n">fs</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">cb</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">minorticks_off</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">cntf</span><span class="o">==</span><span class="kc">False</span><span class="p">:</span> <span class="n">cs</span><span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">z</span><span class="p">,</span><span class="n">var</span><span class="p">,</span><span class="n">colors</span><span class="o">=</span><span class="n">clr</span><span class="p">,</span><span class="n">linewidths</span><span class="o">=</span><span class="n">lw</span><span class="p">,</span><span class="n">levels</span><span class="o">=</span><span class="n">lev</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="n">alp</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">title</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">coords</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">coords</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span> <span class="n">ax</span><span class="o">.</span><span class="n">minorticks_on</span><span class="p">();</span> 
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Depth (m)&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="o">-</span><span class="mi">2</span><span class="p">);</span> 
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;auto&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">profile</span><span class="o">==</span><span class="s1">&#39;lon&#39;</span><span class="p">:</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Latitude ($^</span><span class="si">{o}</span><span class="s1">$N)&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">profile</span><span class="o">==</span><span class="s1">&#39;lat&#39;</span><span class="p">:</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Longitude ($^</span><span class="si">{o}</span><span class="s1">$E)&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">title</span><span class="p">,</span><span class="n">pad</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">);</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>  
+    <span class="k">return</span> <span class="n">ax</span> 
+
+<span class="k">def</span> <span class="nf">plot_cmap</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span><span class="n">lon</span><span class="p">,</span><span class="n">lat</span><span class="p">,</span> <span class="n">var</span><span class="p">,</span><span class="n">vmn</span><span class="p">,</span> <span class="n">vmx</span><span class="p">,</span> <span class="n">stp</span><span class="p">,</span> <span class="n">clr</span><span class="p">,</span><span class="n">units</span><span class="p">,</span><span class="n">title</span><span class="p">,</span><span class="n">coor</span><span class="p">,</span><span class="n">fs</span><span class="p">,</span><span class="n">fsx</span><span class="p">,</span><span class="n">lon_lab</span><span class="p">,</span><span class="n">lat_lab</span><span class="p">):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_extent</span><span class="p">(</span><span class="n">coor</span><span class="p">,</span><span class="n">crs</span><span class="o">=</span><span class="n">cartopy</span><span class="o">.</span><span class="n">crs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
+    <span class="n">pc</span><span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span><span class="n">lat</span><span class="p">,</span><span class="n">var</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">vmn</span><span class="p">,</span><span class="n">vmx</span><span class="p">,</span><span class="n">stp</span><span class="p">),</span><span class="n">cmap</span><span class="o">=</span><span class="n">clr</span><span class="p">,</span><span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">extend</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">)</span> <span class="c1">#, </span>
+    <span class="n">land</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cartopy</span><span class="o">.</span><span class="n">feature</span><span class="o">.</span><span class="n">NaturalEarthFeature</span><span class="p">(</span><span class="s1">&#39;physical&#39;</span><span class="p">,</span> <span class="s1">&#39;land&#39;</span><span class="p">,</span> <span class="s1">&#39;10m&#39;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">))</span>
+    <span class="n">cb</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">pc</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;vertical&#39;</span><span class="p">,</span> <span class="n">extend</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span><span class="n">pad</span><span class="o">=</span><span class="mf">0.02</span><span class="p">)</span><span class="c1">#, aspect=20)  </span>
+    <span class="n">cb</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="n">units</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="n">fs</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="n">position</span><span class="o">=</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">1.08</span><span class="p">))</span>
+<span class="c1">#     cb.ax.set_title(units,fontsize=fs-1,pad=0.2)</span>
+    <span class="n">cb</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">minorticks_off</span><span class="p">()</span>
+    <span class="n">cb</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">labelsize</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;auto&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">title</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+    <span class="n">gl</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">(</span><span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">gl</span><span class="o">.</span><span class="n">xlabel_style</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="n">fsx</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">};</span> <span class="n">gl</span><span class="o">.</span><span class="n">ylabel_style</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="n">fsx</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">};</span> 
+    <span class="n">gl</span><span class="o">.</span><span class="n">xlabels_top</span> <span class="o">=</span> <span class="kc">False</span><span class="p">;</span> <span class="n">gl</span><span class="o">.</span><span class="n">ylabels_right</span><span class="o">=</span> <span class="kc">False</span><span class="p">;</span> <span class="n">gl</span><span class="o">.</span><span class="n">xlines</span> <span class="o">=</span> <span class="kc">False</span><span class="p">;</span> <span class="n">gl</span><span class="o">.</span><span class="n">ylines</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">gl</span><span class="o">.</span><span class="n">xlocator</span> <span class="o">=</span> <span class="n">mticker</span><span class="o">.</span><span class="n">FixedLocator</span><span class="p">(</span><span class="n">lon_lab</span><span class="p">);</span> <span class="n">gl</span><span class="o">.</span><span class="n">ylocator</span> <span class="o">=</span> <span class="n">mticker</span><span class="o">.</span><span class="n">FixedLocator</span><span class="p">(</span><span class="n">lat_lab</span><span class="p">)</span>
+    <span class="n">gl</span><span class="o">.</span><span class="n">xformatter</span> <span class="o">=</span> <span class="n">LONGITUDE_FORMATTER</span> <span class="p">;</span> <span class="n">gl</span><span class="o">.</span><span class="n">yformatter</span> <span class="o">=</span> <span class="n">LATITUDE_FORMATTER</span>
+    <span class="k">return</span> <span class="n">ax</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="integrate-over-depth-meridional-zonal-bands">
+<h2>Integrate over depth, meridional, zonal bands<a class="headerlink" href="#integrate-over-depth-meridional-zonal-bands" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">top</span><span class="o">=</span><span class="mi">50</span><span class="p">;</span> <span class="n">bot</span><span class="o">=</span><span class="mi">150</span>
+<span class="n">Si</span><span class="o">=</span><span class="mi">2</span>  <span class="p">;</span> <span class="n">Ni</span><span class="o">=</span><span class="mi">6</span> 
+<span class="n">Ei</span><span class="o">=-</span><span class="mi">100</span> <span class="p">;</span> <span class="n">Wi</span><span class="o">=-</span><span class="mi">160</span>
+
+
+<span class="n">clr_o2</span><span class="o">=</span><span class="s1">&#39;NegPos&#39;</span>
+<span class="n">om_clr</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span>
+<span class="n">omz_clr</span><span class="o">=</span><span class="s1">&#39;green&#39;</span>
+<span class="n">odz_clr</span><span class="o">=</span><span class="s1">&#39;lime&#39;</span>
+
+
+<span class="n">N</span><span class="p">,</span><span class="n">W</span><span class="o">=</span><span class="n">find_indices</span><span class="p">(</span><span class="n">dsh</span><span class="o">.</span><span class="n">TLONG</span><span class="p">,</span><span class="n">dsh</span><span class="o">.</span><span class="n">TLAT</span><span class="p">,</span><span class="mi">360</span><span class="o">+</span><span class="n">Wi</span><span class="p">,</span><span class="n">Ni</span><span class="p">)</span>
+<span class="n">S</span><span class="p">,</span><span class="n">E</span><span class="o">=</span><span class="n">find_indices</span><span class="p">(</span><span class="n">dsh</span><span class="o">.</span><span class="n">TLONG</span><span class="p">,</span><span class="n">dsh</span><span class="o">.</span><span class="n">TLAT</span><span class="p">,</span><span class="mi">360</span><span class="o">+</span><span class="n">Ei</span><span class="p">,</span><span class="n">Si</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">,)</span>
+<span class="n">gs</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_gridspec</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">left</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">wspace</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">hspace</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+
+<span class="n">fs</span><span class="o">=</span><span class="mi">12</span><span class="p">;</span> <span class="n">fsx</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span> 
+<span class="n">SS</span><span class="o">=-</span><span class="mi">20</span><span class="p">;</span> <span class="n">NN</span><span class="o">=</span><span class="mi">20</span>
+<span class="n">tops</span><span class="o">=</span><span class="mf">0.</span> <span class="p">;</span> <span class="n">bots</span><span class="o">=</span><span class="mf">500.</span><span class="p">;</span> 
+<span class="n">coords</span><span class="o">=</span><span class="p">[[</span><span class="n">bots</span><span class="p">,</span><span class="n">tops</span><span class="p">],[</span><span class="n">SS</span><span class="p">,</span><span class="n">NN</span><span class="p">]]</span>
+
+<span class="n">om_clr</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span>
+
+<span class="n">var</span><span class="o">=</span> <span class="p">[</span><span class="n">dsh</span><span class="o">.</span><span class="n">TEND_O2</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">nlon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">W</span><span class="p">,</span><span class="n">E</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;nlon&#39;</span><span class="p">)</span><span class="o">*</span><span class="n">nmol_mol</span><span class="o">/</span><span class="p">(</span><span class="n">dsh</span><span class="o">.</span><span class="n">VOL</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">nlon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">W</span><span class="p">,</span><span class="n">E</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;nlon&#39;</span><span class="p">)</span><span class="o">*</span><span class="n">cm3_m3</span><span class="p">),</span>
+      <span class="n">dsh</span><span class="o">.</span><span class="n">DIV</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">nlon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">W</span><span class="p">,</span><span class="n">E</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;nlon&#39;</span><span class="p">)</span><span class="o">*</span><span class="n">nmol_mol</span><span class="o">/</span><span class="p">(</span><span class="n">dsh</span><span class="o">.</span><span class="n">VOL</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">nlon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">W</span><span class="p">,</span><span class="n">E</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;nlon&#39;</span><span class="p">)</span><span class="o">*</span><span class="n">cm3_m3</span><span class="p">),</span>
+      <span class="n">dsh</span><span class="o">.</span><span class="n">DIVm</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">nlon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">W</span><span class="p">,</span><span class="n">E</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;nlon&#39;</span><span class="p">)</span><span class="o">*</span><span class="n">nmol_mol</span><span class="o">/</span><span class="p">(</span><span class="n">dsh</span><span class="o">.</span><span class="n">VOL</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">nlon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">W</span><span class="p">,</span><span class="n">E</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;nlon&#39;</span><span class="p">)</span><span class="o">*</span><span class="n">cm3_m3</span><span class="p">),</span>
+      <span class="n">dsh</span><span class="o">.</span><span class="n">DIVp</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">nlon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">W</span><span class="p">,</span><span class="n">E</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;nlon&#39;</span><span class="p">)</span><span class="o">*</span><span class="n">nmol_mol</span><span class="o">/</span><span class="p">(</span><span class="n">dsh</span><span class="o">.</span><span class="n">VOL</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">nlon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">W</span><span class="p">,</span><span class="n">E</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;nlon&#39;</span><span class="p">)</span><span class="o">*</span><span class="n">cm3_m3</span><span class="p">),</span>
+      <span class="n">dsh</span><span class="o">.</span><span class="n">VDIF</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">nlon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">W</span><span class="p">,</span><span class="n">E</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;nlon&#39;</span><span class="p">)</span><span class="o">*</span><span class="n">nmol_mol</span><span class="o">/</span><span class="p">(</span><span class="n">dsh</span><span class="o">.</span><span class="n">VOL</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">nlon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">W</span><span class="p">,</span><span class="n">E</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;nlon&#39;</span><span class="p">)</span><span class="o">*</span><span class="n">cm3_m3</span><span class="p">),</span>
+      <span class="n">dsh</span><span class="o">.</span><span class="n">J_O2</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">nlon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">W</span><span class="p">,</span><span class="n">E</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;nlon&#39;</span><span class="p">)</span><span class="o">*</span><span class="n">nmol_mol</span><span class="o">/</span><span class="p">(</span><span class="n">dsh</span><span class="o">.</span><span class="n">VOL</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">nlon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">W</span><span class="p">,</span><span class="n">E</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;nlon&#39;</span><span class="p">)</span><span class="o">*</span><span class="n">cm3_m3</span><span class="p">),]</span>
+
+<span class="n">cntf</span><span class="o">=</span> <span class="kc">True</span> <span class="p">;</span> <span class="n">cnt</span><span class="o">=</span> <span class="kc">False</span> 
+<span class="n">units</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;mol.m$^{-3}$.s$^{-1}$&#39;</span><span class="p">]</span>
+<span class="n">title</span><span class="o">=</span><span class="p">[</span><span class="sa">r</span><span class="s1">&#39;$\overline{\frac{\partial</span><span class="si">{O_2}</span><span class="s1">}{\partial</span><span class="si">{t}</span><span class="s1">}}$ &#39;</span><span class="p">,</span> 
+     <span class="sa">r</span><span class="s1">&#39;$-\nabla{\overline{(U.O_2)}}$ &#39;</span><span class="p">,</span>
+     <span class="sa">r</span><span class="s1">&#39;$-\nabla{(\overline</span><span class="si">{U}</span><span class="s1">.\overline</span><span class="si">{O_2}</span><span class="s1">)}$ &#39;</span><span class="p">,</span>
+     <span class="sa">r</span><span class="s2">&quot;$-\nabla{(\overline{U&#39;.O_2&#39;})}$&quot;</span><span class="p">,</span>
+     <span class="sa">r</span><span class="s1">&#39;$\overline{\frac{\partial</span><span class="si">{}</span><span class="s1">}{\partial</span><span class="si">{z}</span><span class="s1">}k.\frac{\partial</span><span class="si">{O_2}</span><span class="s1">}{\partial</span><span class="si">{z}</span><span class="s1">}}$ &#39;</span><span class="p">,</span>
+     <span class="sa">r</span><span class="s1">&#39;$\overline{J(O_2)}$ &#39;</span><span class="p">]</span>
+
+<span class="n">clr</span><span class="o">=</span><span class="p">[</span><span class="n">clr_o2</span><span class="p">]</span>
+<span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">;</span> <span class="n">alp</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">cb_on</span><span class="o">=</span><span class="kc">True</span>
+
+<span class="n">lo</span> <span class="o">=</span> <span class="o">-</span><span class="mf">3e-9</span><span class="p">;</span> <span class="n">hi</span> <span class="o">=</span> <span class="o">-</span><span class="n">lo</span><span class="p">;</span> <span class="n">hi2</span> <span class="o">=</span> <span class="o">-</span><span class="n">lo</span><span class="p">;</span> <span class="n">dsc</span> <span class="o">=</span> <span class="o">-</span><span class="n">lo</span><span class="o">*</span><span class="mf">0.5e-1</span>
+<span class="n">y</span><span class="o">=</span><span class="n">dsh</span><span class="o">.</span><span class="n">TLAT</span><span class="p">[:,</span><span class="n">E</span><span class="p">]</span>
+<span class="n">z</span><span class="o">=</span> <span class="n">dsh</span><span class="o">.</span><span class="n">z_t</span><span class="o">*</span><span class="mf">1e-2</span>
+
+<span class="n">i</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">];</span> <span class="n">j</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">)):</span><span class="c1">#len(VAR))):</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="n">i</span><span class="p">[</span><span class="n">k</span><span class="p">],</span><span class="n">j</span><span class="p">[</span><span class="n">k</span><span class="p">]])</span>
+    <span class="n">cax</span><span class="o">=</span> <span class="n">plot_depth_section</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">,</span><span class="n">var</span><span class="p">[</span><span class="n">k</span><span class="p">],</span><span class="n">cntf</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">lo</span><span class="p">,</span> <span class="n">hi</span><span class="o">+</span><span class="n">dsc</span><span class="p">,</span> <span class="n">dsc</span><span class="p">),</span>
+                            <span class="n">clr</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">units</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">title</span><span class="p">[</span><span class="n">k</span><span class="p">],</span><span class="n">coords</span><span class="p">,</span><span class="n">fs</span><span class="p">,</span><span class="n">fsx</span><span class="p">,</span><span class="n">lw</span><span class="p">,</span><span class="n">alp</span><span class="p">,</span><span class="n">cb_on</span><span class="p">,</span><span class="s1">&#39;lon&#39;</span><span class="p">)</span>
+    <span class="n">pch</span><span class="o">=</span> <span class="n">cax</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span><span class="n">dsh</span><span class="o">.</span><span class="n">O2</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">nlon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">W</span><span class="p">,</span><span class="n">E</span><span class="p">))</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">&#39;nlon&#39;</span><span class="p">),</span>
+                     <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span><span class="n">linewidths</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">levels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">300.1</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+    <span class="n">pch</span><span class="o">=</span> <span class="n">cax</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span><span class="n">dsh</span><span class="o">.</span><span class="n">O2</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">nlon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">W</span><span class="p">,</span><span class="n">E</span><span class="p">))</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">&#39;nlon&#39;</span><span class="p">),</span>
+                     <span class="n">colors</span><span class="o">=</span><span class="n">om_clr</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidths</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">levels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mf">200.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">))</span>
+    <span class="n">pch</span><span class="o">=</span> <span class="n">cax</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span><span class="n">dsh</span><span class="o">.</span><span class="n">O2</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">nlon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">W</span><span class="p">,</span><span class="n">E</span><span class="p">))</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">&#39;nlon&#39;</span><span class="p">),</span>
+                     <span class="n">colors</span><span class="o">=</span><span class="n">omz_clr</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidths</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">levels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span><span class="mf">60.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">))</span>
+    <span class="n">pch</span><span class="o">=</span> <span class="n">cax</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span><span class="n">dsh</span><span class="o">.</span><span class="n">O2</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">nlon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">W</span><span class="p">,</span><span class="n">E</span><span class="p">))</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">&#39;nlon&#39;</span><span class="p">),</span>
+                     <span class="n">colors</span><span class="o">=</span><span class="n">odz_clr</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidths</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">levels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mf">20.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">))</span>
+    
+    
+<span class="c1">#     cs2= cax.contour(y, z,(dsp.PD.isel(nlon=slice(W,E)).mean(&#39;nlon&#39;).squeeze()-1)*1e3, colors=&#39;orange&#39;, linewidths=1.0, levels=np.arange(20,27,0.5))</span>
+<span class="c1">#     ax2.clabel(cs2,np.arange(20,27,0.5), fontsize=10)</span>
+
+
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 6/6 [00:08&lt;00:00,  1.44s/it]
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;bound method Figure.tight_layout of &lt;Figure size 2500x700 with 12 Axes&gt;&gt;
+</pre></div>
+</div>
+<img alt="../_images/budget_10_2.png" src="../_images/budget_10_2.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">savefig</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span><span class="s2">&quot;Final_Figures/O2_budget_Meridional_HR&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "conda-env-miniconda3-omz_env-py"
+        },
+        kernelOptions: {
+            kernelName: "conda-env-miniconda3-omz_env-py",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'conda-env-miniconda3-omz_env-py'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="mean_O2.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Mean Oxygen Map</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Yassir Eddebbar<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

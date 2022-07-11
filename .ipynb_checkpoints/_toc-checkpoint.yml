@@ -4,5 +4,5 @@
 format: jb-book
 root: intro
 chapters:
-- file: mean_O2
-- file: budget
+- file: notebooks/mean_O2
+- file: notebooks/budget
