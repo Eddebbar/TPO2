@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Lagrangian Analysis of CESM 0.1º CORE &#8212; Mesoscale O$_2$ Dynamics in the Tropical Pacific</title>
+    <title>Lagrangian Tracks &amp; Budget &#8212; Mesoscale Oxygen Dynamics in the Tropical Pacific</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Summary" href="../../summary.html" />
-    <link rel="prev" title="Oxygen Budget Analysis" href="../budget_analysis/o2_budget_analysis_cesm_0.1_core.html" />
+    <link rel="prev" title="Budget Analysis: Steady State" href="../budget_analysis/o2_budget_analysis_cesm_0.1_core.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -97,7 +97,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="../../_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">Mesoscale O$_2$ Dynamics in the Tropical Pacific</h1>
+      <h1 class="site-logo" id="site-title">Mesoscale Oxygen Dynamics in the Tropical Pacific</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
@@ -121,7 +121,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../data_processing/process_data.html">
-   Data Processing Script
+   Data Processing
   </a>
  </li>
 </ul>
@@ -133,11 +133,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../validation/model_validation.html">
-   This notebook compares the CESM 0.1º and 1º O
-   <span class="math notranslate nohighlight">
-    \(_2\)
-   </span>
-   distributions and zonal velcoity fields to observations
+   Model Validation
   </a>
  </li>
 </ul>
@@ -147,14 +143,22 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../budget_analysis/o2_section.html">
-   This notebook compares the CESM 0.1º and 1º O
-   <span class="math notranslate nohighlight">
-    \(_2\)
-   </span>
-   distributions and zonal velcoity fields to observations
+   Oxygen Distribution
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../budget_analysis/o2_budget_analysis_cesm_0.1_core.html">
+     Budget Analysis: Steady State
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -165,7 +169,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Lagrangian Analysis of CESM 0.1º CORE
+   Lagrangian Tracks &amp; Budget
   </a>
  </li>
 </ul>
@@ -374,8 +378,15 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Lagrangian Analysis of CESM 0.1º CORE
+   Lagrangian Tracks &amp; Budget
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lagrangian-analysis-of-cesm-0-1o-core">
+     Lagrangian Analysis of CESM 0.1º CORE
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#subduction-figure-show-particles-seeded-in-sw-corner-of-vortices">
@@ -391,7 +402,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Lagrangian Analysis of CESM 0.1º CORE</h1>
+                <h1>Lagrangian Tracks & Budget</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -403,8 +414,15 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Lagrangian Analysis of CESM 0.1º CORE
+   Lagrangian Tracks &amp; Budget
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lagrangian-analysis-of-cesm-0-1o-core">
+     Lagrangian Analysis of CESM 0.1º CORE
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#subduction-figure-show-particles-seeded-in-sw-corner-of-vortices">
@@ -421,8 +439,10 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="lagrangian-analysis-of-cesm-0-1o-core">
-<h1>Lagrangian Analysis of CESM 0.1º CORE<a class="headerlink" href="#lagrangian-analysis-of-cesm-0-1o-core" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="lagrangian-tracks-budget">
+<h1>Lagrangian Tracks &amp; Budget<a class="headerlink" href="#lagrangian-tracks-budget" title="Permalink to this headline">#</a></h1>
+<section id="lagrangian-analysis-of-cesm-0-1o-core">
+<h2>Lagrangian Analysis of CESM 0.1º CORE<a class="headerlink" href="#lagrangian-analysis-of-cesm-0-1o-core" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -1628,6 +1648,7 @@ Data variables:
       dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-cc9da6d7-86f0-40a8-b6f7-61bf431e94e4' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-cc9da6d7-86f0-40a8-b6f7-61bf431e94e4' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
 </div>
 </section>
+</section>
 <section class="tex2jax_ignore mathjax_ignore" id="subduction-figure-show-particles-seeded-in-sw-corner-of-vortices">
 <h1>Subduction Figure: Show particles seeded in SW corner of vortices<a class="headerlink" href="#subduction-figure-show-particles-seeded-in-sw-corner-of-vortices" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
@@ -1745,71 +1766,6 @@ Data variables:
 <span class="n">pdays</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">18</span><span class="o">*</span><span class="mi">5</span><span class="p">,</span><span class="mi">19</span><span class="o">*</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">));</span> 
-<span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pdays</span><span class="p">,</span><span class="n">o2ts</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;dodgerblue&#39;</span><span class="p">);</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">pdays</span><span class="p">,</span><span class="n">o2tsl</span><span class="p">,</span><span class="n">o2tsu</span><span class="p">,</span>
-                         <span class="n">facecolor</span><span class="o">=</span><span class="s2">&quot;dodgerblue&quot;</span><span class="p">,</span> <span class="c1"># The fill color</span>
-                         <span class="n">color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">,</span>       <span class="c1"># The outline color</span>
-                         <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span><span class="mi">210</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;[O$_2$] (mmol.m$^{-3}$)&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;dodgerblue&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;dodgerblue&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;days since subduction&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
-
-<span class="n">ax2</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pdays</span><span class="p">,</span><span class="n">zts</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">);</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">pdays</span><span class="p">,</span><span class="n">ztsl</span><span class="p">,</span><span class="n">ztsu</span><span class="p">,</span>
-                         <span class="n">facecolor</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="c1"># The fill color</span>
-                         <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>       <span class="c1"># The outline color</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">140</span><span class="p">,</span><span class="mi">40</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;depth (m)&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span><span class="mi">90</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">135</span><span class="p">,</span><span class="s1">&#39;Subduction&#39;</span><span class="p">,</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">138</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">head_width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">head_length</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mi">40</span><span class="p">,</span><span class="mi">135</span><span class="p">,</span><span class="s1">&#39;Vortex Entrainment&#39;</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="o">-</span><span class="mi">40</span><span class="p">,</span><span class="mi">138</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">head_width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">head_length</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">38</span><span class="p">,</span><span class="s1">&#39;Forward&#39;</span><span class="p">,</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">42</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">head_width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">head_length</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mi">18</span><span class="p">,</span><span class="mi">38</span><span class="p">,</span><span class="s1">&#39;Backward&#39;</span><span class="p">,</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">42</span><span class="p">,</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">head_width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">head_length</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-
-
-<span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pdays</span><span class="p">,</span><span class="n">tend_o2ts</span><span class="o">-</span><span class="n">adv_o2ts</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;dO2/dt&#39;</span><span class="p">);</span>
-<span class="c1"># ax.plot(pdays,tend_o2ts,lw=2.0,color=&#39;blue&#39;);</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pdays</span><span class="p">,</span><span class="n">mix_o2ts</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Vert. Mix&#39;</span><span class="p">);</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pdays</span><span class="p">,</span><span class="n">hmix_o2ts</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;dodgerblue&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Hor. Mix&#39;</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;-.&#39;</span><span class="p">);</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pdays</span><span class="p">,</span><span class="n">j_o2ts</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Prod-Cons&#39;</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">);</span>
-<span class="c1"># ax.plot(pdays,j_o2ts+mix_o2ts+hmix_o2ts,lw=2.0,color=&#39;gray&#39;,ls=&#39;-.&#39;);</span>
-<span class="c1"># ax.plot(pdays,tend_o2ts,lw=2.0,color=&#39;blue&#39;);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-
-<span class="c1"># plt.ylim(120,210)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;dO$_2$dt (nmol/s)&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;days since subduction&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span><span class="mi">90</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.lines.Line2D at 0x2af442ff92e8&gt;
-</pre></div>
-</div>
-<img alt="../../_images/lagrangian_analysis_cesm_0.1_core_8_1.png" src="../../_images/lagrangian_analysis_cesm_0.1_core_8_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1945,6 +1901,71 @@ Data variables:
 <img alt="../../_images/lagrangian_analysis_cesm_0.1_core_9_1.png" src="../../_images/lagrangian_analysis_cesm_0.1_core_9_1.png" />
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">));</span> 
+<span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pdays</span><span class="p">,</span><span class="n">o2ts</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;dodgerblue&#39;</span><span class="p">);</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">pdays</span><span class="p">,</span><span class="n">o2tsl</span><span class="p">,</span><span class="n">o2tsu</span><span class="p">,</span>
+                         <span class="n">facecolor</span><span class="o">=</span><span class="s2">&quot;dodgerblue&quot;</span><span class="p">,</span> <span class="c1"># The fill color</span>
+                         <span class="n">color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">,</span>       <span class="c1"># The outline color</span>
+                         <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span><span class="mi">210</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;[O$_2$] (mmol.m$^{-3}$)&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;dodgerblue&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;dodgerblue&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;days since subduction&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">ax2</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pdays</span><span class="p">,</span><span class="n">zts</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">);</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">pdays</span><span class="p">,</span><span class="n">ztsl</span><span class="p">,</span><span class="n">ztsu</span><span class="p">,</span>
+                         <span class="n">facecolor</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="c1"># The fill color</span>
+                         <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>       <span class="c1"># The outline color</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">140</span><span class="p">,</span><span class="mi">40</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;depth (m)&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">135</span><span class="p">,</span><span class="s1">&#39;Subduction&#39;</span><span class="p">,</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">138</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">head_width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">head_length</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mi">40</span><span class="p">,</span><span class="mi">135</span><span class="p">,</span><span class="s1">&#39;Vortex Entrainment&#39;</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="o">-</span><span class="mi">40</span><span class="p">,</span><span class="mi">138</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">head_width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">head_length</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">38</span><span class="p">,</span><span class="s1">&#39;Forward&#39;</span><span class="p">,</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">42</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">head_width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">head_length</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mi">18</span><span class="p">,</span><span class="mi">38</span><span class="p">,</span><span class="s1">&#39;Backward&#39;</span><span class="p">,</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">42</span><span class="p">,</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">head_width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">head_length</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pdays</span><span class="p">,</span><span class="n">tend_o2ts</span><span class="o">-</span><span class="n">adv_o2ts</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;dO2/dt&#39;</span><span class="p">);</span>
+<span class="c1"># ax.plot(pdays,tend_o2ts,lw=2.0,color=&#39;blue&#39;);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pdays</span><span class="p">,</span><span class="n">mix_o2ts</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Vert. Mix&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pdays</span><span class="p">,</span><span class="n">hmix_o2ts</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;dodgerblue&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Hor. Mix&#39;</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;-.&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pdays</span><span class="p">,</span><span class="n">j_o2ts</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Prod-Cons&#39;</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">);</span>
+<span class="c1"># ax.plot(pdays,j_o2ts+mix_o2ts+hmix_o2ts,lw=2.0,color=&#39;gray&#39;,ls=&#39;-.&#39;);</span>
+<span class="c1"># ax.plot(pdays,tend_o2ts,lw=2.0,color=&#39;blue&#39;);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="c1"># plt.ylim(120,210)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;dO$_2$dt (nmol/s)&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;days since subduction&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.lines.Line2D at 0x2af442ff92e8&gt;
+</pre></div>
+</div>
+<img alt="../../_images/lagrangian_analysis_cesm_0.1_core_10_1.png" src="../../_images/lagrangian_analysis_cesm_0.1_core_10_1.png" />
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1978,7 +1999,7 @@ Data variables:
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Oxygen Budget Analysis</p>
+            <p class="prev-next-title">Budget Analysis: Steady State</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../../summary.html" title="next page">

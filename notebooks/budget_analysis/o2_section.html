@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>This notebook compares the CESM 0.1º and 1º O\(_2\) distributions and zonal velcoity fields to observations &#8212; Mesoscale O$_2$ Dynamics in the Tropical Pacific</title>
+    <title>Oxygen Distribution &#8212; Mesoscale Oxygen Dynamics in the Tropical Pacific</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Oxygen Budget Analysis" href="o2_budget_analysis_cesm_0.1_core.html" />
-    <link rel="prev" title="This notebook compares the CESM 0.1º and 1º O\(_2\) distributions and zonal velcoity fields to observations" href="../validation/model_validation.html" />
+    <link rel="next" title="Budget Analysis: Steady State" href="o2_budget_analysis_cesm_0.1_core.html" />
+    <link rel="prev" title="Model Validation" href="../validation/model_validation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -99,7 +99,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="../../_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">Mesoscale O$_2$ Dynamics in the Tropical Pacific</h1>
+      <h1 class="site-logo" id="site-title">Mesoscale Oxygen Dynamics in the Tropical Pacific</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
@@ -123,7 +123,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../data_processing/process_data.html">
-   Data Processing Script
+   Data Processing
   </a>
  </li>
 </ul>
@@ -135,11 +135,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../validation/model_validation.html">
-   This notebook compares the CESM 0.1º and 1º O
-   <span class="math notranslate nohighlight">
-    \(_2\)
-   </span>
-   distributions and zonal velcoity fields to observations
+   Model Validation
   </a>
  </li>
 </ul>
@@ -149,14 +145,22 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
+ <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
-   This notebook compares the CESM 0.1º and 1º O
-   <span class="math notranslate nohighlight">
-    \(_2\)
-   </span>
-   distributions and zonal velcoity fields to observations
+   Oxygen Distribution
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="o2_budget_analysis_cesm_0.1_core.html">
+     Budget Analysis: Steady State
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -167,7 +171,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../lagrangian_analysis/lagrangian_analysis_cesm_0.1_core.html">
-   Lagrangian Analysis of CESM 0.1º CORE
+   Lagrangian Tracks &amp; Budget
   </a>
  </li>
 </ul>
@@ -374,8 +378,8 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#this-notebook-compares-the-cesm-0-1o-and-1o-o-2-distributions-and-zonal-velcoity-fields-to-observations">
    This notebook compares the CESM 0.1º and 1º O
    <span class="math notranslate nohighlight">
     \(_2\)
@@ -383,17 +387,17 @@ title="Print to PDF"
    distributions and zonal velcoity fields to observations
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#import-packages">
    Import packages
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#spin-up-dask-cluster-client">
    Spin up Dask Cluster/Client
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#read-0-1o-cesm-outputs">
    Read 0.1º CESM Outputs
   </a>
@@ -407,7 +411,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>This notebook compares the CESM 0.1º and 1º O_2 distributions and zonal velcoity fields to observations</h1>
+                <h1>Oxygen Distribution</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -417,8 +421,8 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#this-notebook-compares-the-cesm-0-1o-and-1o-o-2-distributions-and-zonal-velcoity-fields-to-observations">
    This notebook compares the CESM 0.1º and 1º O
    <span class="math notranslate nohighlight">
     \(_2\)
@@ -426,17 +430,17 @@ title="Print to PDF"
    distributions and zonal velcoity fields to observations
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#import-packages">
    Import packages
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#spin-up-dask-cluster-client">
    Spin up Dask Cluster/Client
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#read-0-1o-cesm-outputs">
    Read 0.1º CESM Outputs
   </a>
@@ -451,12 +455,14 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="this-notebook-compares-the-cesm-0-1o-and-1o-o-2-distributions-and-zonal-velcoity-fields-to-observations">
-<h1>This notebook compares the CESM 0.1º and 1º O<span class="math notranslate nohighlight">\(_2\)</span> distributions and zonal velcoity fields to observations<a class="headerlink" href="#this-notebook-compares-the-cesm-0-1o-and-1o-o-2-distributions-and-zonal-velcoity-fields-to-observations" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="oxygen-distribution">
+<h1>Oxygen Distribution<a class="headerlink" href="#oxygen-distribution" title="Permalink to this headline">#</a></h1>
+<section id="this-notebook-compares-the-cesm-0-1o-and-1o-o-2-distributions-and-zonal-velcoity-fields-to-observations">
+<h2>This notebook compares the CESM 0.1º and 1º O<span class="math notranslate nohighlight">\(_2\)</span> distributions and zonal velcoity fields to observations<a class="headerlink" href="#this-notebook-compares-the-cesm-0-1o-and-1o-o-2-distributions-and-zonal-velcoity-fields-to-observations" title="Permalink to this headline">#</a></h2>
 <hr class="docutils" />
 </section>
 <section id="import-packages">
-<h1>Import packages<a class="headerlink" href="#import-packages" title="Permalink to this headline">#</a></h1>
+<h2>Import packages<a class="headerlink" href="#import-packages" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> autoreload
@@ -490,10 +496,10 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="spin-up-dask-cluster-client">
-<h1>Spin up Dask Cluster/Client<a class="headerlink" href="#spin-up-dask-cluster-client" title="Permalink to this headline">#</a></h1>
+<h2>Spin up Dask Cluster/Client<a class="headerlink" href="#spin-up-dask-cluster-client" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="o">=</span><span class="n">CLSTR</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">109</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
@@ -623,7 +629,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="read-0-1o-cesm-outputs">
-<h1>Read 0.1º CESM Outputs<a class="headerlink" href="#read-0-1o-cesm-outputs" title="Permalink to this headline">#</a></h1>
+<h2>Read 0.1º CESM Outputs<a class="headerlink" href="#read-0-1o-cesm-outputs" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;/glade/scratch/yeddebba/Mesoscale/HR/TPAC&#39;</span>
@@ -733,7 +739,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/o2_section_8_0.png" src="../../_images/o2_section_8_0.png" />
+<img alt="../../_images/o2_section_9_0.png" src="../../_images/o2_section_9_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -743,6 +749,7 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -778,13 +785,13 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">This notebook compares the CESM 0.1º and 1º O<span class="math notranslate nohighlight">\(_2\)</span> distributions and zonal velcoity fields to observations</p>
+            <p class="prev-next-title">Model Validation</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="o2_budget_analysis_cesm_0.1_core.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Oxygen Budget Analysis</p>
+        <p class="prev-next-title">Budget Analysis: Steady State</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
