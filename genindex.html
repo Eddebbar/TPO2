@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; Mesoscale Oxygen Dynamics in the Tropical Pacific</title>
+    <title>Index &#8212; Mesoscale O$_2$ Dynamics in the Tropical Pacific</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -91,10 +91,10 @@ const thebe_selector_output = ".output, .cell_output"
         
       
       
-      <img src="_static/O2_logo.png" class="logo" alt="logo">
+      <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">Mesoscale Oxygen Dynamics in the Tropical Pacific</h1>
+      <h1 class="site-logo" id="site-title">Mesoscale O$_2$ Dynamics in the Tropical Pacific</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -110,15 +110,71 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Data Processing
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="notebooks/mean_O2.html">
-   Mean Oxygen Map
+  <a class="reference internal" href="notebooks/data_processing/process_data.html">
+   Data Processing Script
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Model Validation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="notebooks/budget.html">
-   Oxygen Budget Analysis
+  <a class="reference internal" href="notebooks/validation/model_validation.html">
+   This notebook compares the CESM 0.1º and 1º O
+   <span class="math notranslate nohighlight">
+    \(_2\)
+   </span>
+   distributions and zonal velcoity fields to observations
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Budget Analysis
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks/budget_analysis/o2_section.html">
+   This notebook compares the CESM 0.1º and 1º O
+   <span class="math notranslate nohighlight">
+    \(_2\)
+   </span>
+   distributions and zonal velcoity fields to observations
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lagrangian Analysis
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks/lagrangian_analysis/lagrangian_analysis_cesm_0.1_core.html">
+   Lagrangian Analysis of CESM 0.1º CORE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Summary
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="summary.html">
+   Summary
   </a>
  </li>
 </ul>
@@ -185,19 +241,10 @@ title="Fullscreen mode"
   </span>
 
 </button>
-
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/Eddebbar/TPO2"
+<a href="https://github.com/Eddebbar/TPO2"
    class="headerbtn"
    data-toggle="tooltip"
-data-placement="left"
+data-placement="bottom"
 title="Source repository"
 >
   
@@ -205,31 +252,8 @@ title="Source repository"
 <span class="headerbtn__icon-container">
   <i class="fab fa-github"></i>
   </span>
-<span class="headerbtn__text-container">repository</span>
+
 </a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/Eddebbar/TPO2/issues/new?title=Issue%20on%20page%20%2Fgenindex.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
 
     </div>
 </div>
