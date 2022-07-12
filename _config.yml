@@ -3,7 +3,7 @@
 
 title: Mesoscale O$_2$ Dynamics in the Tropical Pacific
 author: Yassir Eddebbar
-logo: O2_logo.png
+logo: logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html

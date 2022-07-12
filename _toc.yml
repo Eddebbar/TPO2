@@ -1,8 +1,21 @@
-# Table of contents
-# Learn more at https://jupyterbook.org/customize/toc.html
-
 format: jb-book
 root: intro
-chapters:
-- file: notebooks/mean_O2
-- file: notebooks/budget
+parts:
+  - caption: Data Processing
+    chapters:
+    - file: notebooks/data_processing/process_data
+  - caption: Model Validation
+    chapters:
+    - file: notebooks/validation/model_validation
+  - caption: Budget Analysis
+    chapters:
+    - file: notebooks/budget_analysis/o2_section
+      sections:
+      - file: notebooks/budget_analysis/o2_budget_analysis_cesm_0.1_core
+  - caption: Lagrangian Analysis
+    chapters:
+    - file: notebooks/lagrangian_analysis/lagrangian_analysis_cesm_0.1_core
+  - caption: Summary
+    chapters:
+    - file: summary
+    

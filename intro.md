@@ -6,6 +6,7 @@ Here we examine the role of physical and biogeochemical processes governing the 
 
 ![oxygen drivers](mechanisms.png)
 
+![mean_map](mean_map.png)
 
 ```{tableofcontents}
 ```
