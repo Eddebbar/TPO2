@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lagrangian Analysis of CESM 0.1º CORE
+# # Lagrangian Tracks & Budget
+
+# ## Lagrangian Analysis of CESM 0.1º CORE
 
 # In[2]:
 
@@ -230,64 +232,6 @@ ptime=np.concatenate([tw[91::-1],tf[1:91:1]])
 pdays=np.arange(-18*5,19*5,5)
 
 
-# In[325]:
-
-
-fig=plt.figure(figsize=(12,12)); 
-ax=plt.subplot(2,1,1)
-ax.plot(pdays,o2ts,lw=2.0,color='dodgerblue');
-
-ax.fill_between(pdays,o2tsl,o2tsu,
-                         facecolor="dodgerblue", # The fill color
-                         color='skyblue',       # The outline color
-                         alpha=0.3)
-plt.ylim(120,210)
-plt.ylabel('[O$_2$] (mmol.m$^{-3}$)',color='dodgerblue',fontsize=16)
-plt.yticks(color='dodgerblue')
-plt.xlabel('days since subduction',fontsize=16)
-ax.grid(False)
-
-ax2=ax.twinx()
-ax2.plot(pdays,zts,lw=2.0,color='gray');
-ax2.fill_between(pdays,ztsl,ztsu,
-                         facecolor="green", # The fill color
-                         color='gray',alpha=0.1)       # The outline color
-plt.ylim(140,40)
-plt.ylabel('depth (m)',color='black',fontsize=16)
-plt.yticks(color='black')
-plt.xlim(-90,90)
-plt.axvline(x=0,color='grey',lw=0.5)
-plt.text(1,135,'Subduction',rotation=0,fontsize=12)
-plt.arrow(1,138,35,0,head_width=2,head_length=3)
-plt.text(-40,135,'Vortex Entrainment', rotation=0,fontsize=12)
-plt.arrow(-40,138,35,0,head_width=2,head_length=3)
-
-plt.text(2,38,'Forward',rotation=0,fontsize=14)
-plt.arrow(1,42,10,0,head_width=2,head_length=1)
-plt.text(-18,38,'Backward',rotation=0,fontsize=14)
-plt.arrow(-1,42,-10,0,head_width=2,head_length=1)
-
-
-ax=plt.subplot(2,1,2)
-ax.plot(pdays,tend_o2ts-adv_o2ts,lw=2.0,color='black',label='dO2/dt');
-# ax.plot(pdays,tend_o2ts,lw=2.0,color='blue');
-ax.plot(pdays,mix_o2ts,lw=2.0,color='orange',label='Vert. Mix');
-ax.plot(pdays,hmix_o2ts,lw=2.0,color='dodgerblue',label='Hor. Mix',ls='-.');
-ax.plot(pdays,j_o2ts,lw=2.0,color='green',label='Prod-Cons',ls='--');
-# ax.plot(pdays,j_o2ts+mix_o2ts+hmix_o2ts,lw=2.0,color='gray',ls='-.');
-# ax.plot(pdays,tend_o2ts,lw=2.0,color='blue');
-plt.axvline(x=0,color='grey',lw=0.5)
-
-# plt.ylim(120,210)
-plt.ylabel('dO$_2$dt (nmol/s)',color='black',fontsize=16)
-plt.yticks(color='black')
-plt.xlabel('days since subduction',fontsize=16)
-plt.legend(fontsize=16)
-ax.grid(False)
-plt.xlim(-90,90)
-plt.axhline(y=0,color='grey',lw=0.5)
-
-
 # In[55]:
 
 
@@ -410,4 +354,62 @@ plt.xlabel('days to vortex subduction')
 
     
 plt.tight_layout()
+
+
+# In[325]:
+
+
+fig=plt.figure(figsize=(12,12)); 
+ax=plt.subplot(2,1,1)
+ax.plot(pdays,o2ts,lw=2.0,color='dodgerblue');
+
+ax.fill_between(pdays,o2tsl,o2tsu,
+                         facecolor="dodgerblue", # The fill color
+                         color='skyblue',       # The outline color
+                         alpha=0.3)
+plt.ylim(120,210)
+plt.ylabel('[O$_2$] (mmol.m$^{-3}$)',color='dodgerblue',fontsize=16)
+plt.yticks(color='dodgerblue')
+plt.xlabel('days since subduction',fontsize=16)
+ax.grid(False)
+
+ax2=ax.twinx()
+ax2.plot(pdays,zts,lw=2.0,color='gray');
+ax2.fill_between(pdays,ztsl,ztsu,
+                         facecolor="green", # The fill color
+                         color='gray',alpha=0.1)       # The outline color
+plt.ylim(140,40)
+plt.ylabel('depth (m)',color='black',fontsize=16)
+plt.yticks(color='black')
+plt.xlim(-90,90)
+plt.axvline(x=0,color='grey',lw=0.5)
+plt.text(1,135,'Subduction',rotation=0,fontsize=12)
+plt.arrow(1,138,35,0,head_width=2,head_length=3)
+plt.text(-40,135,'Vortex Entrainment', rotation=0,fontsize=12)
+plt.arrow(-40,138,35,0,head_width=2,head_length=3)
+
+plt.text(2,38,'Forward',rotation=0,fontsize=14)
+plt.arrow(1,42,10,0,head_width=2,head_length=1)
+plt.text(-18,38,'Backward',rotation=0,fontsize=14)
+plt.arrow(-1,42,-10,0,head_width=2,head_length=1)
+
+
+ax=plt.subplot(2,1,2)
+ax.plot(pdays,tend_o2ts-adv_o2ts,lw=2.0,color='black',label='dO2/dt');
+# ax.plot(pdays,tend_o2ts,lw=2.0,color='blue');
+ax.plot(pdays,mix_o2ts,lw=2.0,color='orange',label='Vert. Mix');
+ax.plot(pdays,hmix_o2ts,lw=2.0,color='dodgerblue',label='Hor. Mix',ls='-.');
+ax.plot(pdays,j_o2ts,lw=2.0,color='green',label='Prod-Cons',ls='--');
+# ax.plot(pdays,j_o2ts+mix_o2ts+hmix_o2ts,lw=2.0,color='gray',ls='-.');
+# ax.plot(pdays,tend_o2ts,lw=2.0,color='blue');
+plt.axvline(x=0,color='grey',lw=0.5)
+
+# plt.ylim(120,210)
+plt.ylabel('dO$_2$dt (nmol/s)',color='black',fontsize=16)
+plt.yticks(color='black')
+plt.xlabel('days since subduction',fontsize=16)
+plt.legend(fontsize=16)
+ax.grid(False)
+plt.xlim(-90,90)
+plt.axhline(y=0,color='grey',lw=0.5)
 

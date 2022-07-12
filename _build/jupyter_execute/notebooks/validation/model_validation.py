@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# # Model Validation
+
 # #### This notebook compares the CESM 0.1º and 1º O$_2$ distributions and zonal velcoity fields to observations
 
 # ---

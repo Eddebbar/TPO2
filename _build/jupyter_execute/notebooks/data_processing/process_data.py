@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Data Processing Script
+# # Data Processing
 
 # ## All model output files can be foud on glade/cheyenne: 
 # 

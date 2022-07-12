@@ -4,8 +4,6 @@ This book presents an analysis of the oxygen budget in the equatorial Pacific in
 
 Here we examine the role of physical and biogeochemical processes governing the structure and seasonal-to-interannual variability of the upper oxygen content and structure, and elaborate on pathways governing oxygen ventilation in this region. 
 
-![oxygen drivers](mechanisms.png)
-
 ![mean_map](mean_map.png)
 
 ```{tableofcontents}
